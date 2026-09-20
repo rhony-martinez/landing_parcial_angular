@@ -1,0 +1,16 @@
+/* Navegación */
+.navbar-piedrazul {
+    background-color: var(--color-primario) !important;
+    box-shadow: 0 2px 8px rgba(14, 82, 141, 0.25);
+}
+
+.navbar-piedrazul .nav-link {
+    font-weight: 500;
+    padding: 0.6rem 1rem !important;
+    transition: color 0.2s;
+}
+
+.navbar-piedrazul .nav-link:hover,
+.navbar-piedrazul .nav-link.active {
+    color: var(--color-secundario) !important;
+}

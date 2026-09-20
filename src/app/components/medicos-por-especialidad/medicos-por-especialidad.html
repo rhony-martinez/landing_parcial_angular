@@ -1,1 +1,20 @@
-<p>medicos-por-especialidad works!</p>
+<section class="section-block section-block--alt" id="seccion2">
+    <div class="container">
+        <h2 class="section-title">¿Qué ofrecemos?</h2>
+        <div class="row g-4">
+            <aside class="col-12 col-sm-2 col-md-4">
+                <app-lista-especialidades />
+            </aside>
+            <div class="col-12 col-sm-10 col-md-8">
+                <h2 class="section-title">Nuestros médicos</h2>
+                <div class="row g-3">
+                    @for (medico of medicos; track medico.id) {
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                        <app-medico-card [medico]="medico" />
+                    </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,1 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
+/* Variables de marca Clínica Piedrazul */
+:root {
+    --color-primario: #0E528D;
+    --color-secundario: #00A3E0;
+    --color-acento: #FF4B60;
+    --color-fondo: #FFFFFF;
+    --color-fondo-alt: #F4F7F9;
+    --color-texto: #1D2A3A;
+    --color-texto-sec: #5C6B73;
+    --bs-primary: #0E528D;
+    --bs-primary-rgb: 14, 82, 141;
+}
+
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    overflow-x: hidden;
+}
+
+html { 
+    scroll-behavior: smooth; 
+    scroll-padding-top: 4rem; 
+}
+
+/* Secciones generales */
+.section-block {
+    padding: 3rem 0;
+}
+
+.section-block--alt {
+    background-color: var(--color-fondo-alt);
+}
+
+.section-title {
+    color: var(--color-primario);
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-secundario);
+    border-radius: 2px;
+}
+
+/* Botones CTA (Agendar / Registrarse) — primario normal, secundario en hover */
+.btn.btn-cta {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    color: #fff;
+    font-weight: 600;
+    transition: background-color 0.2s, border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+
+.btn.btn-cta:hover,
+.btn.btn-cta:focus,
+.btn.btn-cta:focus-visible {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 163, 224, 0.35);
+}
+
+.btn.btn-cta:active {
+    background-color: var(--color-secundario);
+    border-color: var(--color-secundario);
+    color: #fff;
+}

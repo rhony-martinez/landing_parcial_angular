@@ -1,0 +1,38 @@
+.sidebar-especialidades {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 16px rgba(29, 42, 58, 0.08);
+    height: 100%;
+}
+
+.sidebar-especialidades h3 {
+    color: var(--color-primario);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.list-group-item-action {
+    border-left: 3px solid transparent;
+    color: var(--color-texto);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.list-group-item-action:hover,
+.list-group-item-action.active {
+    background-color: rgba(0, 163, 224, 0.1);
+    border-left-color: var(--color-secundario);
+    color: var(--color-primario);
+}
+
+.esp-description {
+    margin-top: 1.25rem;
+    padding: 1rem;
+    background-color: var(--color-fondo-alt);
+    border-radius: 8px;
+    border-left: 4px solid var(--color-secundario);
+    color: var(--color-texto-sec);
+    font-size: 0.95rem;
+    min-height: 80px;
+}

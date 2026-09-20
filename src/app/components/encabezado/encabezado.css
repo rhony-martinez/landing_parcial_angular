@@ -1,0 +1,77 @@
+/* Encabezado */
+.site-header {
+    width: 100%;
+    background: linear-gradient(135deg, var(--color-primario) 0%, #0a3d68 100%);
+    color: #fff;
+    padding: 1.5rem 0;
+}
+
+.header-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.header-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--color-secundario);
+    background-color: var(--color-fondo-alt);
+    flex-shrink: 0;
+}
+
+.header-text h1 {
+    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.header-text .lead {
+    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.92);
+    margin-bottom: 0.5rem;
+}
+
+.header-text p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1.15rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.social-icons a:hover {
+    background-color: var(--color-secundario);
+    color: #fff;
+    transform: translateY(-2px);
+}

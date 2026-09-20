@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { ESPECIALIDADES } from '../../data/especialidades.data';
+import { Especialidad } from '../../models/especialidad';
 
 @Component({
   imports: [],
@@ -6,4 +8,11 @@ import { Component } from '@angular/core';
   styleUrl: './lista-especialidades.css',
   templateUrl: './lista-especialidades.html',
 })
-export class ListaEspecialidades {}
+export class ListaEspecialidades {
+  readonly especialidades = ESPECIALIDADES;
+  readonly seleccionada = signal<Especialidad | null>(null);
+
+  seleccionar(esp: Especialidad): void {
+    this.seleccionada.set(esp);
+  }
+}

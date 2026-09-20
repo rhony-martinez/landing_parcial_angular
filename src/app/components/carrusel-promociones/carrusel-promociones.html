@@ -1,1 +1,14 @@
-<p>carrusel-promociones works!</p>
+<section class="section-block" id="seccion1">
+    <div class="container">
+        <h2 class="section-title">Nuestras promociones</h2>
+        <div class="carousel-wrapper">
+            <ngb-carousel [interval]="5000" [showNavigationArrows]="true" [showNavigationIndicators]="true">
+                @for (promo of promociones; track promo.imagen) {
+                <ng-template ngbSlide>
+                    <img [src]="promo.imagen" [alt]="promo.alt" class="d-block w-100 img-fluid">
+                </ng-template>
+                }
+            </ngb-carousel>
+        </div>
+    </div>
+</section>

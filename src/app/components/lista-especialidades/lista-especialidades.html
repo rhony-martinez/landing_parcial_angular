@@ -1,1 +1,14 @@
-<p>lista-especialidades works!</p>
+<div class="sidebar-especialidades">
+    <h3>Especialidades</h3>
+    <div class="list-group list-group-flush">
+        @for (esp of especialidades; track esp.clave) {
+        <button type="button" class="list-group-item list-group-item-action" [class.active]="seleccionada() === esp"
+            (click)="seleccionar(esp)">
+            {{ esp.nombre }}
+        </button>
+        }
+    </div>
+    <p class="esp-description" aria-live="polite">
+        {{ seleccionada()?.descripcion ?? 'Seleccione una especialidad para ver su descripción.' }}
+    </p>
+</div>

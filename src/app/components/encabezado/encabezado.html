@@ -1,1 +1,22 @@
-<p>encabezado works!</p>
+<header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <div class="header-brand">
+                <img src="assets/icono.png" alt="Logo Clínica Piedrazul" class="header-logo img-fluid border">
+                <div class="header-text">
+                    <h1>Clínica Piedrazul</h1>
+                    <p class="lead mb-1">Atención médica confiable, cercana y especializada para cuidar tu salud.</p>
+                    <p class="d-none d-md-block mb-0">Consulta la información de los médicos, conozca sus especialidades
+                        y agende citas de manera rápida y sencilla.</p>
+                </div>
+            </div>
+            <div class="social-icons">
+                @for (red of redes; track red.nombre) {
+                <a [href]="red.url" target="_blank" rel="noopener noreferrer" [attr.aria-label]="red.nombre">
+                    <i [class]="red.icono"></i>
+                </a>
+                }
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
+import { Medico } from '../../models/medico';
 
 @Component({
   imports: [],
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './medico-card.css',
   templateUrl: './medico-card.html',
 })
-export class MedicoCard {}
+export class MedicoCard {
+  medico = input.required<Medico>();
+}
