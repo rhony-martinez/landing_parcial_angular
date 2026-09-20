@@ -1,0 +1,39 @@
+/* Formulario */
+.form-section {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.form-registro {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(29, 42, 58, 0.1);
+}
+
+.form-registro .form-label {
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+.form-registro .form-control:focus {
+    border-color: var(--color-secundario);
+    box-shadow: 0 0 0 0.2rem rgba(0, 163, 224, 0.25);
+}
+
+.form-registro .form-check-input:checked {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+}
+
+.error,
+.text-danger {
+    color: #dc3545 !important;
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.campo-error {
+    border-color: #dc3545 !important;
+    box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.2) !important;
+}

@@ -1,1 +1,67 @@
-<p>formulario-registro works!</p>
+<section class="section-block" id="seccion3">
+    <div class="container form-section">
+        <div class="text-center mb-4">
+            <h2 class="section-title d-inline-block">Regístrate</h2>
+            <p class="lead text-secondary">Complete sus datos para registrarse en la clínica. El correo electrónico
+                confirma su registro.</p>
+        </div>
+
+        <form [formGroup]="formulario" (ngSubmit)="registrar()" class="form-registro" novalidate>
+
+            <div class="mb-3">
+                <label for="nombresUsuario" class="form-label">Nombres*</label>
+                <input type="text" id="nombresUsuario" class="form-control" placeholder="Ej. Rosa María"
+                    formControlName="nombres" maxlength="20" [class.campo-error]="mostrarError('nombres')"
+                    (blur)="validarAlCambiarFoco('nombres')">
+                <div class="text-danger">{{ mensajeError('nombres') }}</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="apellidosUsuario" class="form-label">Apellidos*</label>
+                <input type="text" id="apellidosUsuario" class="form-control" placeholder="Ej. Gómez Mora"
+                    formControlName="apellidos" maxlength="20" [class.campo-error]="mostrarError('apellidos')"
+                    (blur)="validarAlCambiarFoco('apellidos')">
+                <div class="text-danger">{{ mensajeError('apellidos') }}</div>
+            </div>
+
+            <fieldset class="mb-3 div--genero" [class.campo-error]="mostrarError('genero')">
+                <legend class="form-label fs-6">Género*</legend>
+                <div class="d-flex justify-content-start gap-3 options--genero">
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="masculinoUsuario" value="masculino" class="form-check-input"
+                            formControlName="genero" (blur)="validarAlCambiarFoco('genero')">
+                        <label class="form-check-label genero__label" for="masculinoUsuario">Masculino</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input type="radio" id="femeninoUsuario" value="femenino" class="form-check-input"
+                            formControlName="genero" (blur)="validarAlCambiarFoco('genero')">
+                        <label class="form-check-label genero__label" for="femeninoUsuario">Femenino</label>
+                    </div>
+                </div>
+                <div class="text-danger genero--error">{{ mensajeError('genero') }}</div>
+            </fieldset>
+
+            <div class="mb-3">
+                <label for="edadUsuario" class="form-label">Edad*</label>
+                <input type="number" id="edadUsuario" class="form-control" placeholder="Ej. 25" formControlName="edad"
+                    [class.campo-error]="mostrarError('edad')" (blur)="validarAlCambiarFoco('edad')">
+                <div class="form-text">Ingrese un valor entre 1 y 200 años.</div>
+                <div class="text-danger">{{ mensajeError('edad') }}</div>
+            </div>
+
+            <div class="mb-4">
+                <label for="emailUsuario" class="form-label">Correo electrónico*
+                    <span class="label__atencion">(confirma su registro)</span></label>
+                <input type="email" id="emailUsuario" class="form-control" placeholder="Ej. usuario@gmail.com"
+                    formControlName="email" [class.campo-error]="mostrarError('email')"
+                    (blur)="validarAlCambiarFoco('email')">
+                <div class="form-text">Formato válido: nombre@dominio.com o .co</div>
+                <div class="text-danger">{{ mensajeError('email') }}</div>
+            </div>
+
+            <div class="d-flex justify-content-start">
+                <button type="submit" class="btn btn-cta px-4">Registrarse</button>
+            </div>
+        </form>
+    </div>
+</section>

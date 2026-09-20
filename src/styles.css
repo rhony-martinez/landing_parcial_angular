@@ -26,6 +26,10 @@ body {
     overflow-x: hidden;
 }
 
+app-root, app-encabezado, app-carrusel-promociones,
+app-medicos-por-especialidad, app-formulario-registro, app-footer {
+    display: block;
+}
 html { 
     scroll-behavior: smooth; 
     scroll-padding-top: 4rem; 

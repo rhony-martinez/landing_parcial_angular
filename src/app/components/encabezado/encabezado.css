@@ -75,3 +75,14 @@
     color: #fff;
     transform: translateY(-2px);
 }
+
+@media (max-width: 575.98px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-brand {
+        flex-direction: column;
+    }
+}

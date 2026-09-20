@@ -1,1 +1,8 @@
-<p>notificaciones works!</p>
+<div class="notificaciones-contenedor" aria-live="polite">
+    @for (n of notificaciones(); track n.id) {
+    <div class="notificacion" [class.notificacion-exito]="n.tipo === 'exito'"
+        [class.notificacion-error]="n.tipo === 'error'">
+        {{ n.mensaje }}
+    </div>
+    }
+</div>
