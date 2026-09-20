@@ -1,0 +1,1 @@
+export interface Promocion { imagen: string; alt: string; }

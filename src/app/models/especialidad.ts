@@ -1,0 +1,1 @@
+export interface Especialidad { clave: string; nombre: string; descripcion: string; }
