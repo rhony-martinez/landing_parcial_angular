@@ -1,6 +1,9 @@
-/* Formulario */
+:host {
+    display: block;
+}
+
 .form-section {
-    max-width: 640px;
+    max-width: 720px;
     margin: 0 auto;
 }
 
@@ -26,14 +29,46 @@
     border-color: var(--color-primario);
 }
 
-.error,
+.form-registro fieldset {
+    border: 0;
+    min-width: 0;
+}
+
+.form-registro .label__atencion {
+    font-weight: 400;
+    color: var(--color-texto-sec);
+    font-size: 0.85rem;
+}
+
+.invalid-feedback,
 .text-danger {
     color: #dc3545 !important;
     font-size: 0.8rem;
     font-weight: 400;
+    min-height: 1.1em;
 }
 
 .campo-error {
     border-color: #dc3545 !important;
     box-shadow: 0 0 0 0.15rem rgba(220, 53, 69, 0.2) !important;
+}
+
+fieldset.campo-error {
+    box-shadow: none !important;
+}
+
+@media (max-width: 575.98px) {
+    .form-registro {
+        padding: 1.25rem;
+    }
+
+    .form-section .lead {
+        font-size: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .w-md-auto {
+        width: auto !important;
+    }
 }

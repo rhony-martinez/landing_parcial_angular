@@ -1,7 +1,18 @@
-/* Navegación */
+:host {
+    display: block;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
 .navbar-piedrazul {
     background-color: var(--color-primario) !important;
     box-shadow: 0 2px 8px rgba(14, 82, 141, 0.25);
+}
+
+.navbar-piedrazul .navbar-brand {
+    font-weight: 600;
+    font-size: 1rem;
 }
 
 .navbar-piedrazul .nav-link {
@@ -15,9 +26,13 @@
     color: var(--color-secundario) !important;
 }
 
-:host { 
-    display: block; 
-    position: sticky; 
-    top: 0; 
-    z-index: 1020; 
+@media (max-width: 767.98px) {
+    .navbar-piedrazul .nav-link {
+        padding: 0.75rem 0.25rem !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .navbar-piedrazul .nav-item:last-child .nav-link {
+        border-bottom: none;
+    }
 }

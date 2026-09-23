@@ -1,3 +1,7 @@
+:host {
+    display: block;
+}
+
 /* Footer */
 .site-footer {
     width: 100%;
@@ -54,4 +58,22 @@
     text-align: center;
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.85rem;
+}
+
+@media (max-width: 575.98px) {
+    .site-footer {
+        padding: 2rem 0 1rem;
+        text-align: center;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.35rem;
+    }
+
+    .footer-social a {
+        margin-right: 0;
+    }
 }

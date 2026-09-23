@@ -1,3 +1,8 @@
+:host {
+    display: block;
+    height: 100%;
+}
+
 .sidebar-especialidades {
     background: #fff;
     border-radius: 12px;
@@ -17,6 +22,7 @@
     color: var(--color-texto);
     cursor: pointer;
     transition: all 0.2s;
+    word-break: break-word;
 }
 
 .list-group-item-action:hover,
@@ -35,4 +41,21 @@
     color: var(--color-texto-sec);
     font-size: 0.95rem;
     min-height: 80px;
+}
+
+@media (min-width: 576px) {
+    .sidebar-especialidades {
+        position: sticky;
+        top: 4.5rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .sidebar-especialidades {
+        padding: 1.15rem;
+    }
+
+    .sidebar-especialidades h3 {
+        font-size: 1.1rem;
+    }
 }

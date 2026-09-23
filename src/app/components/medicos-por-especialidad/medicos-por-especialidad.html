@@ -1,15 +1,17 @@
 <section class="section-block section-block--alt" id="seccion2">
     <div class="container">
         <h2 class="section-title">¿Qué ofrecemos?</h2>
-        <div class="row g-4">
-            <aside class="col-12 col-sm-2 col-md-4">
+        <div class="row g-4 align-items-start">
+            <!-- Sidebar: 1 col (móvil) · 4/12 (tablet) · 3/12 (escritorio) -->
+            <aside class="col-12 col-sm-4 col-lg-3">
                 <app-lista-especialidades />
             </aside>
-            <div class="col-12 col-sm-10 col-md-8">
+            <!-- Médicos: 1/fila (móvil) · 2/fila (tablet) · 3/fila (escritorio) -->
+            <div class="col-12 col-sm-8 col-lg-9">
                 <h2 class="section-title">Nuestros médicos</h2>
-                <div class="row g-3">
+                <div class="row g-3 row-cols-1 row-cols-sm-2 row-cols-lg-3">
                     @for (medico of medicos; track medico.id) {
-                    <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="col">
                         <app-medico-card [medico]="medico" />
                     </div>
                     }

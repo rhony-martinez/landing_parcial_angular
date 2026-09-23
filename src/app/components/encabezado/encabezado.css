@@ -1,4 +1,7 @@
-/* Encabezado */
+:host {
+    display: block;
+}
+
 .site-header {
     width: 100%;
     background: linear-gradient(135deg, var(--color-primario) 0%, #0a3d68 100%);
@@ -33,13 +36,13 @@
 }
 
 .header-text h1 {
-    font-size: clamp(1.5rem, 3vw, 2.25rem);
+    font-size: clamp(1.35rem, 3vw, 2.25rem);
     font-weight: 700;
     margin-bottom: 0.35rem;
 }
 
 .header-text .lead {
-    font-size: clamp(0.95rem, 2vw, 1.15rem);
+    font-size: clamp(0.9rem, 2vw, 1.15rem);
     font-weight: 300;
     color: rgba(255, 255, 255, 0.92);
     margin-bottom: 0.5rem;
@@ -53,6 +56,7 @@
 
 .social-icons {
     display: flex;
+    flex-wrap: wrap;
     gap: 0.75rem;
     flex-shrink: 0;
 }
@@ -76,6 +80,17 @@
     transform: translateY(-2px);
 }
 
+@media (max-width: 767.98px) {
+    .site-header {
+        padding: 1.15rem 0;
+    }
+
+    .header-logo {
+        width: 72px;
+        height: 72px;
+    }
+}
+
 @media (max-width: 575.98px) {
     .header-content {
         flex-direction: column;
@@ -84,5 +99,9 @@
 
     .header-brand {
         flex-direction: column;
+    }
+
+    .social-icons {
+        justify-content: center;
     }
 }

@@ -1,0 +1,16 @@
+:host {
+    display: block;
+}
+
+app-lista-especialidades,
+app-medico-card {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 575.98px) {
+    .section-title {
+        font-size: 1.35rem;
+    }
+}

@@ -1,4 +1,8 @@
-/* Tarjetas médicos */
+:host {
+    display: block;
+    height: 100%;
+}
+
 .medico-card {
     border: none;
     border-radius: 12px;
@@ -13,7 +17,13 @@
     box-shadow: 0 8px 24px rgba(29, 42, 58, 0.15);
 }
 
+.medico-card__img-wrap {
+    overflow: hidden;
+    background-color: var(--color-fondo-alt);
+}
+
 .medico-card .card-img-top {
+    width: 100%;
     height: 200px;
     object-fit: cover;
 }
@@ -21,6 +31,7 @@
 .medico-card .card-title {
     color: var(--color-primario);
     font-weight: 600;
+    font-size: 1.05rem;
 }
 
 .medico-card .card-subtitle {
@@ -32,4 +43,16 @@
 .medico-card .card-text {
     color: var(--color-texto-sec);
     font-size: 0.9rem;
+}
+
+@media (max-width: 575.98px) {
+    .medico-card .card-img-top {
+        height: 220px;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .medico-card .card-img-top {
+        height: 180px;
+    }
 }
